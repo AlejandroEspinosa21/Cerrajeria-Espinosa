@@ -195,8 +195,7 @@ a {
 
 .hero__bg-text {
   position: absolute;
-  left: 500px;
-  width: 100%;
+  right: -5%; /* En lugar de left: 500px, usamos right negativo */
   top: 50%;
   transform: translateY(-50%);
   font-family: var(--fuente-titulo);
@@ -617,18 +616,15 @@ a {
     padding: 120px 20px 60px;
   }
 
-  /* 1. Arregla el texto de fondo que obligaba a hacer zoom lateral */
+  /* Ocultamos el texto de fondo gigante en celular para erradicar la barra */
   .hero__bg-text {
-    left: 0;
-    font-size: 4rem;
-    opacity: 0.02;
+    display: none;
   }
 
   .hero__badge {
     display: none;
   }
 
-  /* 2. Cambia los servicios a 1 sola columna para celular */
   .servicios__grid {
     grid-template-columns: 1fr;
   }
