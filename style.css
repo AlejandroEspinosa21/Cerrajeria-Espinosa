@@ -616,14 +616,30 @@ a {
     padding: 120px 20px 60px;
   }
 
+  /* 1. Arregla el texto de fondo que obligaba a hacer zoom lateral */
+  .hero__bg-text {
+    left: 0;
+    font-size: 4rem;
+    opacity: 0.02;
+  }
+
   .hero__badge {
     display: none;
+  }
+
+  /* 2. Cambia los servicios a 1 sola columna para celular */
+  .servicios__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios__grid .card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
   }
 
   .servicios,
   .contacto,
   .nosotros {
-    padding: 70px 20px;
+    padding: 60px 20px;
   }
 
   .contacto__grid {
@@ -632,6 +648,6 @@ a {
   }
 
   .nosotros__stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
